@@ -7,11 +7,11 @@ class vec
 {
 public:
 	int total = 0;
-	manager* man;
-	vec(manager* m);
-	~vec();
+	manager* man;//manager refrence object
+	vec(manager* m);//constructor
+	~vec();//destructor
 	int print();
-	void add(int a);
+	void add(int a);//adds integer to vector
 
 
 private:

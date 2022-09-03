@@ -7,9 +7,10 @@
 #include"manager.h"
 using namespace std;
 
-
+//function to ask for integer and return integer + 1
 int func() {
     bool intiger;
+    bool test = 1;
     int it = 0;
     do  {
         try {
@@ -39,13 +40,14 @@ int func() {
 int main()
 {
 
-    manager *man = new manager;
-    vec factories(man);
+    manager *man = new manager;//manager object
+    vec factories(man);//vector object
     bool end = false;
     do {
-        char decide;
+        char decide;//variable cin >> uses
         std::cout << "\ndo you want to build a factory Y/N\n";
-        cin >> decide;
+        cin >> decide;//asks for input
+        //if you enter 'Y'(uppercase) as integer is added to factories vector. anything else is treated as 'N'
         if (decide == 'Y') {
             cout << "\nwhat is the factory matanace cost\n";
             factories.add(func());
@@ -58,6 +60,7 @@ int main()
 
         cout << "destroy all factories? Y/N\n";
         cin >> decide;
+        //entering 'Y' here ends program
         if (decide == 'Y') {
             cout << "what is the factory matanace cost\n";
             factories.~vec();

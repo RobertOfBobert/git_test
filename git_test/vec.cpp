@@ -18,8 +18,9 @@ int vec::print()
 {
 	int tot = 0;
 	for (int ig : v) {
+		cout << ig << endl;
 		tot += ig;
-}
+	}
 	cout << tot;
 	total = tot;
 	return tot;
